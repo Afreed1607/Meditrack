@@ -15,6 +15,14 @@ public abstract class MedicalEntity {
     protected LocalDateTime updatedAt;
 
     /**
+     * Default no-argument constructor for serialization support.
+     * Protected to prevent external instantiation.
+     */
+    protected MedicalEntity() {
+        this("DEFAULT");
+    }
+
+    /**
      * Default constructor - initializes timestamps to current time.
      */
     protected MedicalEntity(String id) {

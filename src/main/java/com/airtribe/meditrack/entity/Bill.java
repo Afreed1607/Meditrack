@@ -27,6 +27,23 @@ public class Bill extends MedicalEntity implements Payable, Serializable {
     private String description;
 
     /**
+     * Default constructor for serialization support.
+     */
+    public Bill() {
+        super();
+        this.appointmentId = "";
+        this.doctorId = "";
+        this.patientId = "";
+        this.baseAmount = 0;
+        this.taxAmount = 0;
+        this.totalAmount = 0;
+        this.isPaid = false;
+        this.paymentDate = null;
+        this.paymentMethod = "Not Paid";
+        this.description = "Medical consultation fee";
+    }
+
+    /**
      * Constructor for creating a Bill.
      */
     public Bill(String id, String appointmentId, String doctorId, String patientId,
@@ -104,10 +121,6 @@ public class Bill extends MedicalEntity implements Payable, Serializable {
         this.description = description;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
     /**
      * Apply an additional discount to the bill.
      */
@@ -121,6 +134,7 @@ public class Bill extends MedicalEntity implements Payable, Serializable {
 
     /**
      * Implement abstract method from MedicalEntity.
+     * Provides a description of this bill.
      */
     @Override
     public String getDescription() {
@@ -140,4 +154,5 @@ public class Bill extends MedicalEntity implements Payable, Serializable {
                 '}';
     }
 }
+
 

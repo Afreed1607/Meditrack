@@ -17,7 +17,7 @@ public class Validator {
         Pattern.compile("^[0-9]{10}$");
 
     private static final Pattern NAME_PATTERN =
-        Pattern.compile("^[a-zA-Z\\s]{2,}$");
+        Pattern.compile("^[a-zA-Z\\s.]{2,}$");
 
     private Validator() {
         throw new AssertionError("Validator class cannot be instantiated");
