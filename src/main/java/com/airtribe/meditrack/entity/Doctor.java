@@ -141,7 +141,7 @@ public class Doctor extends Person {
     public String toString() {
         return "Doctor{" +
                 "id='" + id + '\'' +
-                ", name='" + name + '\'' +
+                ", name='" + getName() + '\'' +
                 ", specialization=" + specialization +
                 ", experience=" + yearsOfExperience + " years" +
                 ", fee=" + consultationFee +
@@ -150,4 +150,5 @@ public class Doctor extends Person {
                 '}';
     }
 }
+
 

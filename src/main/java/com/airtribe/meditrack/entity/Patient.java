@@ -155,7 +155,7 @@ public class Patient extends Person implements Cloneable {
     public String toString() {
         return "Patient{" +
                 "id='" + id + '\'' +
-                ", name='" + name + '\'' +
+                ", name='" + getName() + '\'' +
                 ", bloodGroup='" + bloodGroup + '\'' +
                 ", height=" + height + "cm" +
                 ", weight=" + weight + "kg" +
@@ -164,4 +164,5 @@ public class Patient extends Person implements Cloneable {
                 '}';
     }
 }
+
 
